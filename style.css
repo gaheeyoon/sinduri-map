@@ -9,7 +9,7 @@
     padding: 0px;
 }
 body {
-    background-color: rgb(225, 225, 225);
+    background-color: rgb(240, 239, 233);
 }
 #mapArea {
     width: 100%;
@@ -24,19 +24,7 @@ body {
     width: 100%;
     max-width: 1200px;
 }
-.coffeeIcon {
-    position: absolute;
-    width: 4%;
-}
-.clamIcon {
-    position: absolute;
-    width: 4%;
-}
-.fishIcon {
-    position: absolute;
-    width: 4%;
-}
-.noteIcon {
+.coffee img, .restaurant img, .culture img {
     position: absolute;
     width: 4%;
 }
@@ -51,50 +39,18 @@ body {
     margin-left: 3%;
     margin-top: 3%;
 }
-#cafeSandhill {
-    left: 9%;
-    top: 72%;
-}
-#cafeForrenu {
-    left: 30%;
-    top: 49%;
-}
-#cafeDune {
-    left: 54%;
-    top: 21%;
-}
-#cafeSantorini {
-    left: 58%;
-    top: 14%;
-}
-#cafeCountryroad {
-    left: 86%;
-    top: 86%;
-}
-#restaurantSinduri {
-    left: 30%;
-    top: 58%;
-}
-#restaurantSinduri + span {
-    left: 31%;
-    top: 56%;
-}
-#restaurantFishingVillage {
-    left: 32%;
-    top: 70%;
-}
-#restaurantFishingVillage + span {
-    left: 33%;
-    top: 67%;
-}
-#ohrock {
-    left: 30%;
-    top: 63%;
-}
-#ohrock + span {
-    left: 31%;
-    top: 62%;
-}
+#sandhill * { left: 9%; top: 72%; }
+#forrenu * { left: 30%; top: 49%; }
+#cafeDune * { left: 54%; top: 21%; }
+#pettiSantorini * { left: 58%; top: 14%; }
+#countryroadCoffee * { left: 86%; top: 86%; }
+#sinduriRestaurant img { left: 30%; top: 58%; }
+#sinduriRestaurant span { left: 31%; top: 56%; }
+#fishingVillage img { left: 32%; top: 70%; }
+#fishingVillage span { left: 33%; top: 67%; }
+#ohrock img { left: 30%; top: 63%; }
+#ohrock span { left: 31%; top: 62%; }
+
 @media (min-width: 1500px) {
     .companyName {
         font-size: 27px;
