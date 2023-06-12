@@ -11,6 +11,7 @@
 <body>
     <div id="mapArea">
         <img src="./map.jpg" alt="신두리 지도" id="map" />
+        <img src="./icon/surf.png" alt="서퍼" id="surf" />
 
         <!-- 카페 -->
         <a href="https://blog.naver.com/hlogs/222986640662" class="cafe" id="sandhill">
@@ -35,7 +36,7 @@
         </a>
 
         <!-- 식당 -->
-        <a href="#" class="restaurant" id="sinduriRestaurant" >
+        <a href="https://blog.naver.com/hlogs/223127220900" class="restaurant" id="sinduriRestaurant" >
             <img src="./icon/clam.png" alt="신두리식당" />
             <span class="companyName">신두리식당</span>
         </a>
@@ -89,7 +90,7 @@
                 <span>Restaurant</span>
             </li>
             <li>
-                <a href="#" class="restaurant">
+                <a href="https://blog.naver.com/hlogs/223127220900" class="restaurant">
                     <span class="companyName">신두리식당</span>
                 </a>
             </li>
@@ -118,10 +119,26 @@
     </footer>
 </body>
 <script>
-    $("#mapArea a").hover(function(){
-        $(this).children('img').attr('src', $(this).children('img').attr('src').replace('.png','_outline.png'));
-    }, function (){
-        $(this).children('img').attr('src', $(this).children('img').attr('src').replace('_outline.png','.png'));
-    })
+    $(document).ready(function () {
+        $('#mapArea a').hover(function() {
+            $(this).children('img').attr('src', $(this).children('img').attr('src').replace('.png','_outline.png'));
+        }, function (){
+            $(this).children('img').attr('src', $(this).children('img').attr('src').replace('_outline.png','.png'));
+        });
+
+        moveSurfRandomLocation()
+    });
+
+    function moveSurfRandomLocation() {
+        randLeft = Math.random() * 40;
+        maxTop = -0.76 * randLeft + 40;
+        randTop = Math.random() * maxTop;
+
+        $('#surf').css('left', randLeft + '%');
+        $('#surf').css('top', randTop + '%');
+        $('#surf').animate({left: '+=15%'}, 2000); 
+    }
+
+    loop = setInterval(moveSurfRandomLocation, 10000);
 </script>
 </html>

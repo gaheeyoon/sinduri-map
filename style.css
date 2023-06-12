@@ -51,6 +51,11 @@ body {
 #mapArea #ohrock img { left: 30%; top: 63%; }
 #mapArea #ohrock span { left: 31%; top: 62%; }
 
+#surf {
+    position: absolute;
+    width: 6%;
+}
+
 #mapList ul, #mapList li {
     list-style: none;
 }
